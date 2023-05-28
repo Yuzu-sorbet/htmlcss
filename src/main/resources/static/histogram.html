@@ -5,14 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histogram Generator</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+    </style>
 </head>
 <body>
    <h2>Histogram Generator</h2>
-   <p>Hello world</p>
-   <table>
-    <tr>Max</tr>
-    <tr>100</tr>
-   </table>
+   <div class ="parent">
+    <div class ="lower-bound">
+        <h4>Lower bounds</h4>
+        <form action="/form" method="post">
+            <label for="Max">Max</label>
+            <input type="text" id="Max"><br>
+            <label for="A+">A+</label>
+            <input type="text" id="A+"><br>
+            <label for="A">A</label>
+            <input type="text" id="A"><br>
+            <label for="A-">A-</label>
+            <input type="text" id="A-"><br>
+            <label for="B+">B+</label>
+            <input type="text" id="B+"><br>
+
+        </form>
+    </div>
+    <div class ="histogram">
+        <h4>Histogram</h4>
+        <form action="/form" method="post">
+            <label>A+</label><br>
+            <label>A</label><br>
+            <label>A-</label><br>
+            <label>B+</label><br>
+            <label>B</label><br>
+            <label>B-</label><br>
+            <label>C+</label><br>
+            <label>C</label><br>
+            <label>C-</label><br>
+            <label>D</label><br>
+            <label>F</label><br>
+        </form>
+    </div>
+   </div>
 
 </body>
 </html>
