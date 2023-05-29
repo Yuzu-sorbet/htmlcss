@@ -1,0 +1,73 @@
+
+label {
+    float: left;
+    width: 120px;
+    font-size: 12px;
+    text-indent: 25px;
+    margin-bottom: 12px;
+    margin-right: 20px;
+}
+.grade {
+    float: none;
+    text-indent: 0px;
+    margin-right: 0px;
+}
+
+input {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: right;
+    width: 60px;
+    padding: 5px;
+    padding-right: 7px;
+    padding-left: 3px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    
+}
+
+.newgrade{
+    width: 100px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.parent {
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.lower-bound{
+    background-color: #EAEFF1;
+    padding: 15px;
+    margin: 6px;
+    width: 350px;
+}
+
+.histogram {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    
+}
+
+.top {
+    margin: 6px;
+    padding: 15px;
+    background-color: #EAEFF1;
+    
+}
+.bottom {
+    height: 150px;
+    margin: 6px;
+    padding: 15px;
+    background-color: #EAEFF1;
+}
+
+h5 {
+    color: #A62824;
+    margin-top: 0px;
+    margin-bottom: 27px;
+}
+

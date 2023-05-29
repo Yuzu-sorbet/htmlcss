@@ -5,52 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histogram Generator</title>
-    <style>
-        div {
-            margin-bottom: 10px;
-        }
-        label {
-            display: inline-block;
-            width: 150px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/histogram.css">
 </head>
 <body>
-   <h2>Histogram Generator</h2>
-   <div class ="parent">
-    <div class ="lower-bound">
-        <h4>Lower bounds</h4>
-        <form action="/form" method="post">
-            <label for="Max">Max</label>
-            <input type="text" id="Max"><br>
-            <label for="A+">A+</label>
-            <input type="text" id="A+"><br>
-            <label for="A">A</label>
-            <input type="text" id="A"><br>
-            <label for="A-">A-</label>
-            <input type="text" id="A-"><br>
-            <label for="B+">B+</label>
-            <input type="text" id="B+"><br>
+    <header>
+        <h2>Histogram Generator</h2>
+    </header>
+    <main>
+        <div class ="parent">
+            <div class ="lower-bound">
+                <form action="/submit">
 
-        </form>
-    </div>
-    <div class ="histogram">
-        <h4>Histogram</h4>
-        <form action="/form" method="post">
-            <label>A+</label><br>
-            <label>A</label><br>
-            <label>A-</label><br>
-            <label>B+</label><br>
-            <label>B</label><br>
-            <label>B-</label><br>
-            <label>C+</label><br>
-            <label>C</label><br>
-            <label>C-</label><br>
-            <label>D</label><br>
-            <label>F</label><br>
-        </form>
-    </div>
-   </div>
+                    <h5>Lower bounds</h5>
 
+                    <label>Max</label>
+                    <input type="text" value="100.00"><br>
+                     <label>A+</label>
+                    <input type="text" value="95.00"><br>
+                    <label>A</label>
+                    <input type="text" value="90.00"><br>
+                    <label>A-</label>
+                    <input type="text" value="85.00"><br>
+                    <label>B+</label>
+                    <input type="text" value="80.00"><br>
+                    <label>B</label>
+                    <input type="text" value="75.00"><br>
+                    <label>B-</label>
+                    <input type="text" value="70.00"><br>
+                    <label>C+</label>
+                    <input type="text" value="65.00"><br>
+                    <label>C</label>
+                    <input type="text" value="60.00"><br>
+                    <label>C-</label>
+                    <input type="text" value="55.00"><br>
+                    <label>D</label>
+                    <input type="text" value="50.00"><br>
+                    <label>F</label>
+                    <input type="text" value="0.00"><br>
+
+                </form>
+            </div>
+            <div class ="histogram">
+                <section class="top">
+                    <form action="/submit">
+                        <h5>Histogram</h5>
+                        <label>A+</label><br>
+                        <label>A</label><br>
+                        <label>A-</label><br>
+                        <label>B+</label><br>
+                        <label>B</label><br>
+                        <label>B-</label><br>
+                        <label>C+</label><br>
+                        <label>C</label><br>
+                        <label>C-</label><br>
+                        <label>D</label><br>
+                        <label>F</label><br>
+                    </form>
+                </section>
+                <section class="bottom">
+                    <form action="/submit">
+                        <label class="grade">New Grade: </label>
+                        <input type="text" class="newgrade">
+                        <input type="submit" value="Submit">
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
