@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histogram Generator</title>
     <link rel="stylesheet" href="/css/histogram.css">
+    <script src="/js/calculate.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,40 +15,40 @@
     <main>
         <div class ="parent">
             <div class ="lower-bound">
-                <form action="/submit">
+                <form>
 
                     <h5>Lower bounds</h5>
 
                     <label>Max</label>
-                    <input type="text" value="100.00"><br>
+                    <input type="text" id="max" value="100.00"><br>
                      <label>A+</label>
-                    <input type="text" value="95.00"><br>
+                    <input type="text" id="a+" value="95.00"><br>
                     <label>A</label>
-                    <input type="text" value="90.00"><br>
+                    <input type="text" id="a" value="90.00"><br>
                     <label>A-</label>
-                    <input type="text" value="85.00"><br>
+                    <input type="text" id="a-" value="85.00"><br>
                     <label>B+</label>
-                    <input type="text" value="80.00"><br>
+                    <input type="text" id="b+" value="80.00"><br>
                     <label>B</label>
-                    <input type="text" value="75.00"><br>
+                    <input type="text" id="b" value="75.00"><br>
                     <label>B-</label>
-                    <input type="text" value="70.00"><br>
+                    <input type="text" id="b-" value="70.00"><br>
                     <label>C+</label>
-                    <input type="text" value="65.00"><br>
+                    <input type="text" id="c+" value="65.00"><br>
                     <label>C</label>
-                    <input type="text" value="60.00"><br>
+                    <input type="text" id="c" value="60.00"><br>
                     <label>C-</label>
-                    <input type="text" value="55.00"><br>
+                    <input type="text" id="c-" value="55.00"><br>
                     <label>D</label>
-                    <input type="text" value="50.00"><br>
+                    <input type="text" id="d" value="50.00"><br>
                     <label>F</label>
-                    <input type="text" value="0.00"><br>
+                    <input type="text" id="f" value="0.00"><br>
 
                 </form>
             </div>
             <div class ="histogram">
                 <section class="top">
-                    <form action="/submit">
+                    <form>
                         <h5>Histogram</h5>
                         <label>A+</label><br>
                         <label>A</label><br>
@@ -63,11 +64,12 @@
                     </form>
                 </section>
                 <section class="bottom">
-                    <form action="/submit">
+                    <form>
                         <label class="grade">New Grade: </label>
-                        <input type="text" class="newgrade">
+                        <input type="text" id="ngrade" class="newgrade">
                         <input type="submit" value="Submit">
                     </form>
+                    <div class="error"></div>
                 </section>
             </div>
         </div>
