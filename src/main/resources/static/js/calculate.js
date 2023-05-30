@@ -40,7 +40,7 @@ function hist(grading){
             console.log('activated a+');
         } 
         else if(grading[i] >= a){
-            a2.textContent +='❑';
+            a2.textContent +='0';
             console.log('activated a');
         }
         else if(grading[i] >= aminus){
@@ -48,35 +48,35 @@ function hist(grading){
             console.log('activated a-');
         }
         else if(grades[i] >= bplus){
-            b1.textContent +='❑';
+            b1.textContent +='0';
             console.log('activated b+');
         }
         else if(grading[i] >= b){
-            b2.textContent +='❑';
+            b2.textContent +='0';
             console.log('activated b');
         }
         else if(grading[i] >= bminus){
-            b3.textContent +='❑';
+            b3.textContent +='0';
             console.log('activated b-');
         }
         else if(grading[i] >= cplus){
-            c1.textContent +='❑';
+            c1.textContent +='0';
             console.log('activated c+');
         }
         else if(grading[i] >= c){
-            c2.textContent +='❑';
+            c2.textContent +='0';
             console.log('activated c');
         }
         else if(grading[i] >= cminus){
-            c3.textContent +='❑';
+            c3.textContent +='0';
             console.log('activated c-');
         }
         else if(grading[i] >= d){
-            d1.textContent +='❑';
+            d1.textContent +='0';
             console.log('activated d');
         }
         else{ //50
-            f1.textContent +='❑';
+            f1.textContent +='0';
             console.log('activated f');
         }
     }

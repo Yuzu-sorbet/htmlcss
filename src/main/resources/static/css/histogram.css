@@ -78,9 +78,9 @@ h5 {
     float: left;
     margin-left: -90px;
     height: 10px;
-    font-size: 5px;
-    color: rebeccapurple;
-    background-color: red;
+    font-size: 3px;
+    color: transparent;
+    background-color: #900C3F;
     max-width: 220px;
     word-break: break-word;
     white-space: pre-wrap;
