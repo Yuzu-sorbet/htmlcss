@@ -30,6 +30,7 @@ var d1 = document.getElementById('d1');
 var f1 = document.getElementById('f1');
 
 var i = 0;
+var count = 0;
 
 function hist(grading){
 //add number of students to each grade - accurate to histogram
@@ -44,11 +45,12 @@ function hist(grading){
             console.log('activated a');
         }
         else if(grading[i] >= aminus){
-            a3.textContent +='❑';
+            a3.textContent +='0';
             console.log('activated a-');
         }
         else if(grades[i] >= bplus){
             b1.textContent +='0';
+            count ++;
             console.log('activated b+');
         }
         else if(grading[i] >= b){
@@ -89,6 +91,7 @@ hist(grades);
 var button = document.querySelector('input[value="Submit"]');
 // modify error message and input border colour on error
 var error = document.getElementsByClassName('error')[0];
+var error2 = document.getElementsByClassName('error2')[0];
 var inputbox = document.getElementsByClassName('newgrade')[0]
 button.addEventListener('click', function(evt){
     evt.preventDefault()
@@ -124,4 +127,51 @@ function isValid(grade){
     }
     return false
 }
+
+//readjust grade bounds A-
+var gradeaminus = document.getElementById('a-');
+gradeaminus.addEventListener("keypress", gradea3);
+
+//function for adjusting A- bounds 
+function gradea3(evt){
+    // check when enter is pressed
+    if (evt.key === "Enter") {
+      // Cancel the default action
+      evt.preventDefault();
+      //check for valid grade adjustment
+      var gradea = document.getElementById('a-').value;
+      var lowerbound = document.getElementById('b+').value;
+      var upperbound = document.getElementById('a').value;
+      if (isNaN(gradea)){
+          document.getElementById('a-').style.border = "2px solid red";
+          error2.textContent = "Invalid input.";
+      }
+      else{
+          if (isValid(gradea)){
+              if (lowerbound < gradea && gradea < upperbound){
+                  parseFloat(gradea);
+                  console.log(gradea);
+                  //set new grade bound
+                  aminus = gradea;
+                  //update histogram
+                  hist(grades);
+                  document.getElementById('a-').style.border = "1px solid black";
+                  error2.textContent = "";
+              }
+              else{
+                  document.getElementById('a-').style.border = "2px solid red";
+                  error2.textContent = "Invalid input.";
+              }
+          }
+          else{
+              document.getElementById('a-').style.border = "2px solid red";
+  
+          }
+      }
+    }
+  }
+
+//readjust grade bounds B+
+var gradebplus = document.getElementById('b+');
+gradeaminus.addEventListener("keypress", gradea3);
 
