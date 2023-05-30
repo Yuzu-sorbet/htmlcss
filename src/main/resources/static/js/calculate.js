@@ -29,57 +29,61 @@ var c3 = document.getElementById('c3');
 var d1 = document.getElementById('d1');
 var f1 = document.getElementById('f1');
 
-var length = grades.length;
+var i = 0;
 
-function hist(){
-//add number of students to each grade - accurate to histogram 
-    for (var i=0; i <= length; i++){
-        if (grades[i] >= aplus){
+function hist(grading){
+//add number of students to each grade - accurate to histogram
+    var length = grading.length; 
+    for (; i < length; i++){
+        if (grading[i] >= aplus){
             a1.textContent += '0';
+            console.log('activated a+');
         } 
-        else if (grades[i] >= a){
-            a1.style.width = a1 + 'px';
+        else if(grading[i] >= a){
             a2.textContent +='❑';
             console.log('activated a');
         }
-        else if (grades[i] >= aminus){
+        else if(grading[i] >= aminus){
             a3.textContent +='❑';
-            console.log(grades[i]);
+            console.log('activated a-');
         }
-        else if (grades[i] >= bplus){
+        else if(grades[i] >= bplus){
             b1.textContent +='❑';
             console.log('activated b+');
         }
-        else if (grades[i] >= b){
+        else if(grading[i] >= b){
             b2.textContent +='❑';
             console.log('activated b');
         }
-        else if (grades[i] >= bminus){
+        else if(grading[i] >= bminus){
             b3.textContent +='❑';
             console.log('activated b-');
         }
-        else if (grades[i] >= cplus){
+        else if(grading[i] >= cplus){
             c1.textContent +='❑';
             console.log('activated c+');
         }
-        else if (grades[i] >= c){
+        else if(grading[i] >= c){
             c2.textContent +='❑';
             console.log('activated c');
         }
-        else if (grades[i] >= cminus){
+        else if(grading[i] >= cminus){
             c3.textContent +='❑';
             console.log('activated c-');
         }
-        else if (grades[i] >= d){
+        else if(grading[i] >= d){
             d1.textContent +='❑';
             console.log('activated d');
         }
-        else if (grades[i] >= f){
+        else{ //50
             f1.textContent +='❑';
             console.log('activated f');
         }
     }
+    return
 }
+
+hist(grades);
 
 //get user-inputted grade on submit button click
 var button = document.querySelector('input[value="Submit"]');
@@ -97,11 +101,12 @@ button.addEventListener('click', function(evt){
     else{
         if (isValid(newgrade)){
             if (parseFloat(newgrade)){
+                //update histogram
+                console.log(newgrade);
                 grades.push(newgrade);
+                hist(grades);
                 inputbox.style.border = "1px solid black";
                 error.textContent = "";
-                //update histogram
-                hist();
             }
         }
         else{
