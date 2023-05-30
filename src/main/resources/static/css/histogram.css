@@ -73,3 +73,17 @@ h5 {
     margin-bottom: 27px;
 }
 
+.graph {
+    float: left;
+    top: -100px;
+    height: 5px;
+    font-size: small;
+    text-align: center;
+    background-color: transparent;
+    
+}
+
+.error{
+    font-size: small;
+    color: red;
+}
