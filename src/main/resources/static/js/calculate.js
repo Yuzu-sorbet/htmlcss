@@ -35,9 +35,10 @@ function hist(){
 //add number of students to each grade - accurate to histogram 
     for (var i=0; i <= length; i++){
         if (grades[i] >= aplus){
-            a1.textContent += '❑';
+            a1.textContent += '0';
         } 
         else if (grades[i] >= a){
+            a1.style.width = a1 + 'px';
             a2.textContent +='❑';
             console.log('activated a');
         }

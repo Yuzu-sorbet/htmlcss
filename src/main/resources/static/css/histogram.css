@@ -75,11 +75,11 @@ h5 {
 
 .graph {
     float: left;
-    top: -100px;
-    height: 5px;
-    font-size: small;
-    text-align: center;
-    background-color: transparent;
+    margin-left: -90px;
+    height: 10px;
+    font-size: 1px;
+    color: transparent;
+    background-color: red;
     
 }
 
