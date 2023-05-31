@@ -32,6 +32,7 @@ input {
 }
 
 h2 {
+    margin-left: 8px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
@@ -78,7 +79,7 @@ h5 {
 .graph {
     float: left;
     margin-left: -90px;
-    height: 10px;
+    height: 12px;
     font-size: 3px;
     color: transparent;
     background-color: #900C3F;
