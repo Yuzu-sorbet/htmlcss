@@ -126,7 +126,7 @@ function gradea1(evt){
       //check for valid grade adjustment
       var gradea1 = document.getElementById('a+').value;
       var lowerbound = document.getElementById('a').value;
-      var upperbound = document.getElementById('max').value;
+      var upperbound = 100;
       if (isNaN(gradea1)){
           document.getElementById('a+').style.border = "2px solid red";
           error2.textContent = "Invalid input.";
